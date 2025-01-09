@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>welcome to {{channel.name}}</h2>
+        <p> {{channel.description}}</p>
+
+        {% for video in channel.video_set.all %}
+        <h2>video: {{video.title}}</h2>
+        {% endfor %}
+        
+    </div>
+    
+</body>
+</html>

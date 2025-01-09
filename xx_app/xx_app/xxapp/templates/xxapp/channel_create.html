@@ -1,0 +1,30 @@
+<!---
+<form action = "" method = "post">
+    {% csrf_token %}
+    {{form }}
+    <input type="submit" value=Submit">
+</form>--->
+
+
+
+<form action = "" method = "post">
+    {% csrf_token %}
+{{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.name.as_field_group }}
+  </div>
+  <div class="fieldWrapper">
+    {{ form.description.as_field_group }}
+  </div>
+  <div class="fieldWrapper">
+    {{ form.user.as_field_group }}
+  </div>
+  <div class="fieldWrapper">
+    {{ form.banner_image.as_field_group }}
+  </div>
+  <div class="fieldWrapper">
+    {{ form.subscribers.as_field_group }}
+  </div>
+<input type="submit" value=Submit>
+</form>
+

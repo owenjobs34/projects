@@ -1,0 +1,28 @@
+<p> hello world</p>
+
+<div>
+    
+    {% for channel in channel %}
+<div class="channels" style="border: 3px solid black;">
+    <h5>channel: {{channel.name}}</h5>
+    <p>description: {{channel.description}}</p></br>
+    <p>identity: {{channel.id}}</p></br>
+    <p>creator: <strong> {{channel.user.username}} </strong></p>
+    
+    {% for video in channel.video_set.all %}
+    <p>video: <strong> {{video.title}} </strong></p>
+    <a href="/watch_video/{{video.id}}">watch video</a>
+    {% endfor %}
+
+</div>
+
+
+{% endfor %}
+
+{{channel.video}}
+</div>
+
+
+{% for x in channel.Video.all %}
+{{x.title}}
+{% endfor %}
